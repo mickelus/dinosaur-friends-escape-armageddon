@@ -51,7 +51,7 @@ public class FollowMultiplePlayers : MonoBehaviour {
 		maxdistancex = Mathf.Abs (minx) + Mathf.Abs (maxx);
 		maxdistancey = Mathf.Abs (miny) + Mathf.Abs (maxy);
 
-		transform.position = new Vector3(x, y + 5, -10);
-		Camera.main.orthographicSize = Mathf.Lerp (Camera.main.orthographicSize, 7 + (Vector2.Distance(positionArray[0].position,positionArray[1].position) / cameraZoom), Time.deltaTime);
+		transform.position = new Vector3(x, y, -10);
+		Camera.main.orthographicSize = Mathf.Lerp (Camera.main.orthographicSize, 4 + (Vector2.Distance(positionArray[0].position,positionArray[1].position) / cameraZoom), Time.deltaTime);
 	}
 }
