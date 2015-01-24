@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnitySampleAssets._2D;
 
-public class levelStart : MonoBehaviour {
+public class PlayerHandler : MonoBehaviour {
 
 	public Transform trex;
 	public Transform raptor;
