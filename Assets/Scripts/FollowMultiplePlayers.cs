@@ -8,19 +8,19 @@ public class FollowMultiplePlayers : MonoBehaviour {
 	private float minx, maxx, miny, maxy;
 	private float maxdistancex, maxdistancey;
 
-	public levelStart levelStart;
+	public PlayerHandler playerHandler;
 
 	public float cameraZoom = 1.0f;
 
 	// Use this for initialization
 	void Start () {
-		positionArray = levelStart.players;
+		positionArray = playerHandler.players;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		float x = 0f, y = 0f, z = 0f;
-		print (positionArray.Count);
+
 		if (positionArray.Count > 0) {
 
 			minx = positionArray [0].position.x;

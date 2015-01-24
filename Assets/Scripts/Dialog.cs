@@ -4,13 +4,15 @@ using System.Collections.Generic;
 
 public class Dialog : MonoBehaviour {
 
-	public List<GameObject> players;
+	private List<Transform> players;
 	public GameObject dialogToShow;
 	public bool show;
 
+	public PlayerHandler playerHandler;
+
 	// Use this for initialization
 	void Start () {
-		players = new List<GameObject> ();
+		players = playerHandler.players;
 	}
 	
 	// Update is called once per frame
@@ -18,7 +20,7 @@ public class Dialog : MonoBehaviour {
 
 		show = false;
 
-		foreach (GameObject child in players)
+		foreach (Transform child in players)
 		{
 	
 			float distance = Vector2.Distance (transform.position, child.transform.position);
