@@ -38,6 +38,8 @@ namespace UnitySampleAssets._2D
             // Pass all parameters to the character control script.
             character.Move(h, crouch, jump);
             jump = false;
+
+			Physics2D.IgnoreLayerCollision (8, 9, rigidbody2D.velocity.y > 0);
         }
     }
 }
