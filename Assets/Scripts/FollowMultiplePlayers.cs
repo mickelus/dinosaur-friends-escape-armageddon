@@ -7,6 +7,7 @@ public class FollowMultiplePlayers : MonoBehaviour {
 	private float minx, maxx, miny, maxy;
 	private float maxdistancex, maxdistancey;
 
+	public float maxDistance;
 	public float cameraZoom = 1.0f;
 
 	// Use this for initialization
@@ -52,6 +53,8 @@ public class FollowMultiplePlayers : MonoBehaviour {
 		maxdistancey = Mathf.Abs (miny) + Mathf.Abs (maxy);
 
 		transform.position = new Vector3(x, y, -10);
+	
 		Camera.main.orthographicSize = Mathf.Lerp (Camera.main.orthographicSize, 7 + (Vector2.Distance(positionArray[0].position,positionArray[1].position) / cameraZoom), Time.deltaTime);
+		
 	}
 }

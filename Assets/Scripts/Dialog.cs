@@ -5,24 +5,23 @@ public class Dialog : MonoBehaviour {
 
 	public GameObject[] players;
 	public GameObject dialogToShow;
-	public bool show;
+	public float maxdistance;
 
 	// Use this for initialization
 	void Start () {
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		show = false;
+		bool show = false;
 
 		foreach (GameObject child in players)
 		{
 	
 			float distance = Vector2.Distance (transform.position, child.transform.position);
 
-			if(distance < 2.0f) {
+			if(distance < maxdistance) {
 				show = true;
 			}
 			dialogToShow.SetActive(show);
