@@ -51,6 +51,6 @@ public class FollowMultiplePlayers : MonoBehaviour {
 		maxdistancex = Mathf.Abs (minx) + Mathf.Abs (maxx);
 		maxdistancey = Mathf.Abs (miny) + Mathf.Abs (maxy);
 
-		transform.position = new Vector3(x, y, -maxdistancex / cameraZoom);
+		transform.position = new Vector3(x, transform.position.y, -maxdistancex / cameraZoom);
 	}
 }
