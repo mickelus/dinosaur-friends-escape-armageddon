@@ -165,9 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControlHorizontal: Player 2 Horizontal
-  playerControlVertical: Player 2 Vertical
-  playerControlJump: 
+  playerControlHorizontal: Player 1 Horizontal
+  playerControlVertical: Player 1 Vertical
+  playerControlJump: Player 1 Jumps
   playerControlUse: 
 --- !u!114 &11441986
 MonoBehaviour:
