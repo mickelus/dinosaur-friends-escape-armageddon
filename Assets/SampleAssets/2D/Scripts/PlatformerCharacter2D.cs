@@ -72,11 +72,11 @@ namespace UnitySampleAssets._2D
                 rigidbody2D.velocity = new Vector2(move*maxSpeed, rigidbody2D.velocity.y);
 
                 // If the input is moving the player right and the player is facing left...
-                if (move > 0 && !facingRight)
+                if (move > 0 && facingRight)
                     // ... flip the player.
                     Flip();
                     // Otherwise if the input is moving the player left and the player is facing right...
-                else if (move < 0 && facingRight)
+                else if (move < 0 && !facingRight)
                     // ... flip the player.
                     Flip();
             }

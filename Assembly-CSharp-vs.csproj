@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{74EC383D-A1B1-92E5-FF26-953A703276FF}</ProjectGuid>
+	<ProjectGuid>{5583725B-47A9-9CE0-F873-B2971A0EDDFC}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -65,6 +65,7 @@
      <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\VirtualInput.cs" />
      <Compile Include="Assets\Scripts\FollowMultiplePlayers.cs" />
+     <Compile Include="Assets\Scripts\Movement2D.cs" />
      <None Include="Assets\SampleAssets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
