@@ -1,57 +1,62 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class FollowMultiplePlayers : MonoBehaviour {
 
-	public Transform[] positionArray;
+	public List<Transform> positionArray;
 	private float minx, maxx, miny, maxy;
 	private float maxdistancex, maxdistancey;
+
+	public levelStart levelStart;
 
 	public float cameraZoom = 1.0f;
 
 	// Use this for initialization
 	void Start () {
-			
+		positionArray = levelStart.players;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
 		float x = 0f, y = 0f, z = 0f;
+		print (positionArray.Count);
+		if (positionArray.Count > 0) {
 
-		minx = positionArray[0].position.x;
-		maxx = positionArray[0].position.x;
-		miny = positionArray[0].position.y;
-		maxy = positionArray[0].position.y;
+			minx = positionArray [0].position.x;
+			maxx = positionArray [0].position.x;
+			miny = positionArray [0].position.y;
+			maxy = positionArray [0].position.y;
 
-		for(int i = 0; i < positionArray.Length;i++) {
+			foreach (Transform t in positionArray) {
 
-			x += positionArray[i].position.x;
-			y += positionArray[i].position.y;
-			z += positionArray[i].position.z;
+					x += t.position.x;
+					y += t.position.y;
+					z += t.position.z;
 
-			if(minx > positionArray[i].position.x) {
-				minx = positionArray[i].position.x;
+					if (minx > t.position.x) {
+							minx = t.position.x;
+					}
+					if (maxx < t.position.x) {
+							maxx = t.position.x;
+					}
+					if (miny > t.position.y) {
+							miny = t.position.y;
+					}
+					if (maxy < t.position.y) {
+							maxy = t.position.y;
+					}
+
 			}
-			if(maxx < positionArray[i].position.x) {
-				maxx = positionArray[i].position.x;
-			}
-			if(miny > positionArray[i].position.y) {
-				miny = positionArray[i].position.y;
-			}
-			if(maxy < positionArray[i].position.y) {
-				maxy = positionArray[i].position.y;
-			}
+			x /= positionArray.Count;
+			y /= positionArray.Count;
+			z /= positionArray.Count;
 
+			maxdistancex = Mathf.Abs (minx) + Mathf.Abs (maxx);
+			maxdistancey = Mathf.Abs (miny) + Mathf.Abs (maxy);
+
+			transform.position = new Vector3 (x, y, -10);
+			Camera.main.orthographicSize = Mathf.Lerp (Camera.main.orthographicSize, 7 + (Vector2.Distance (new Vector2(minx, miny), new Vector2(maxx, maxy)) / cameraZoom), Time.deltaTime);
 		}
-		x /= positionArray.Length;
-		y /= positionArray.Length;
-		z /= positionArray.Length;
-
-		maxdistancex = Mathf.Abs (minx) + Mathf.Abs (maxx);
-		maxdistancey = Mathf.Abs (miny) + Mathf.Abs (maxy);
-
-		transform.position = new Vector3(x, y, -10);
-		Camera.main.orthographicSize = Mathf.Lerp (Camera.main.orthographicSize, 7 + (Vector2.Distance(positionArray[0].position,positionArray[1].position) / cameraZoom), Time.deltaTime);
 	}
 }
