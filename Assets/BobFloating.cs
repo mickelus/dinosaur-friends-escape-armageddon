@@ -10,6 +10,6 @@ public class BobFloating : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate(new Vector3(transform.position.x, transform.position.y + 1.0f * Mathf.Sin (Time.time), transform.position.z));
+//		transform.Translate(new Vector3(transform.position.x, transform.position.y + 1.0f * Mathf.Sin (Time.time), transform.position.z));
 	}
 }
