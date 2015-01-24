@@ -5,6 +5,7 @@ using System.Collections;
 public class WaterTrigger : MonoBehaviour {
 
 	bool hurt;
+	public int hp;
 	Transform t;
 
 
@@ -23,7 +24,7 @@ public class WaterTrigger : MonoBehaviour {
 	}
 
 	IEnumerator Hurt(Health h){
-		h.health -= 5;
+		h.health -= hp;
 		yield return new WaitForSeconds (1);
 		if(hurt){
 			StartCoroutine (Hurt(h));
