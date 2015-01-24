@@ -41,7 +41,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 27
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -54,7 +54,7 @@ TextureImporter:
         y: 32
         width: 64
         height: 32
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: T-Rex-Idle_1
@@ -64,7 +64,7 @@ TextureImporter:
         y: 32
         width: 64
         height: 32
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: T-Rex-Idle_2
@@ -74,7 +74,7 @@ TextureImporter:
         y: 0
         width: 64
         height: 32
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: T-Rex-Idle_3
@@ -84,7 +84,7 @@ TextureImporter:
         y: 0
         width: 64
         height: 32
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
