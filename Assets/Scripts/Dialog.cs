@@ -19,7 +19,8 @@ public class Dialog : MonoBehaviour {
 
 		foreach (GameObject child in players)
 		{
-			float distance = Mathf.Abs(transform.position.x - child.transform.position.x);
+	
+			float distance = Vector2.Distance (transform.position, child.transform.position);
 
 			if(distance < 2.0f) {
 				show = true;
