@@ -27,8 +27,8 @@ namespace UnitySampleAssets._2D
         private void Awake()
         {
             // Setting up references.
-            groundCheck = transform.Find("GroundCheck");
-            ceilingCheck = transform.Find("CeilingCheck");
+            groundCheck = transform.FindChild("GroundCheck");
+			ceilingCheck = transform.FindChild("CeilingCheck");
             anim = GetComponent<Animator>();
         }
 
