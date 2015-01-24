@@ -27,8 +27,8 @@ namespace UnitySampleAssets._2D
         private void Awake()
         {
             // Setting up references.
-            groundCheck = transform.Find("GroundCheck");
-            ceilingCheck = transform.Find("CeilingCheck");
+            groundCheck = transform.FindChild("GroundCheck");
+            ceilingCheck = transform.FindChild("CeilingCheck");
             anim = GetComponent<Animator>();
         }
 
@@ -40,7 +40,11 @@ namespace UnitySampleAssets._2D
             anim.SetBool("Ground", grounded);
 
             // Set the vertical animation
-            anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+			anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+			
+			if(GetComponent<Health>().dead){
+				this.enabled = false;
+			}
         }
 
 

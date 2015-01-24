@@ -4,7 +4,8 @@ using UnitySampleAssets.CrossPlatformInput;
 namespace UnitySampleAssets._2D
 {
 
-    [RequireComponent(typeof (PlatformerCharacter2D))]
+	[RequireComponent(typeof (PlatformerCharacter2D))]
+	[AddComponentMenu("Character2D")]
     public class Platformer2DUserControl : MonoBehaviour
     {
         private PlatformerCharacter2D character;

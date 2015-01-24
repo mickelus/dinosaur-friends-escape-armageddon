@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 2DCharacterAnimator
+  m_Name: 2DT-rexAnimator
   serializedVersion: 2
   m_AnimatorParameters:
   - m_Name: Speed
@@ -583,7 +583,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 728135614a7e6f840bcabeae39f49bdb, type: 2}
+  - {fileID: 7400000, guid: 4ceec144ac5c83340b69083b20b5258a, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: -180, y: 132, z: 0}
   m_IKOnFeet: 0
@@ -598,7 +598,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 728135614a7e6f840bcabeae39f49bdb, type: 2}
+  - {fileID: 7400000, guid: 4ceec144ac5c83340b69083b20b5258a, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 144, y: 132, z: 0}
   m_IKOnFeet: 0
