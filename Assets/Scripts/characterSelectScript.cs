@@ -13,13 +13,15 @@ public class characterSelectScript : MonoBehaviour {
 
 	public Text startText;
 
+	public int numPlayers = 2;
+
 	bool[] hasJoined;
 	int[] selectedCharacter;
 
 	// Use this for initialization
 	void Start () {
-		hasJoined = new bool[4];
-		selectedCharacter = new int[4];
+		hasJoined = new bool[numPlayers];
+		selectedCharacter = new int[numPlayers];
 
 		for (int i = 0; i < selectedCharacter.Length; i++) {
 			updateCharacter (i);
@@ -121,6 +123,7 @@ public class characterSelectScript : MonoBehaviour {
 
 	}
 	void updateCharacter(int index) {
+		print (index);
 		characterTexts[index].text = characterNames [selectedCharacter [index]];
 		characterImages[index].sprite = characterSprites [selectedCharacter [index]];
 	}
@@ -137,7 +140,9 @@ public class characterSelectScript : MonoBehaviour {
 
 	void startGame() {
 		if (hasAnyoneJoined ()) {
-			// TODO: send dataz
+			PlayerPrefs.SetInt("character1", hasJoined[0] ? selectedCharacter[0] : -1);
+			PlayerPrefs.SetInt("character2", hasJoined[1] ? selectedCharacter[1] : -1);
+			Application.LoadLevel("Level1");
 		}
 	}
 	
