@@ -11,15 +11,11 @@ public class PlayerHandler : MonoBehaviour {
 
 	public GameObject trex;
 	public GameObject raptor;
-<<<<<<< HEAD
-=======
 
 	public Transform trexPos;
 	public Transform raptorPos;
 
 	private bool gameOver = false;
->>>>>>> 6019e188be4a92f03c207c25c71298007dfd5372
-	
 	public List<GameObject> players;
 
 	// Use this for initialization

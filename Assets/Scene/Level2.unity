@@ -23933,8 +23933,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb13fac8ebcdc42b3b5a3279577d1c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathScreen: {fileID: 0}
   trex: {fileID: 335135285}
   raptor: {fileID: 885879697}
+  trexPos: {fileID: 0}
+  raptorPos: {fileID: 0}
   players: []
 --- !u!1 &1292805835
 GameObject:
@@ -33171,7 +33174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48aa4a6025f80b94d8a840830a76ff91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentObject: {fileID: 1583103055}
 --- !u!1 &1790104749
 GameObject:
   m_ObjectHideFlags: 0
@@ -35333,7 +35335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48aa4a6025f80b94d8a840830a76ff91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentObject: {fileID: 1033817097}
 --- !u!1001 &1942586232
 Prefab:
   m_ObjectHideFlags: 0
