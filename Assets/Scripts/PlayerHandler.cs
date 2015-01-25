@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using UnitySampleAssets._2D;
+using UnitySampleAssets.CrossPlatformInput;
 
 public class PlayerHandler : MonoBehaviour {
 
 	public Transform trex;
 	public Transform raptor;
+
+	public Canvas deathScreen;
 	
 	public List<Transform> players;
 
@@ -38,7 +42,6 @@ public class PlayerHandler : MonoBehaviour {
 			configureControls(control, 2);
 			players.Add(t);
 		}
-		print (players.Count);
 	}
 
 	void configureControls(Platformer2DUserControl control, int player) {
@@ -50,6 +53,15 @@ public class PlayerHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		foreach (Transform player in players) {
+			if (player.GetComponent<Health> ().dead) {
+				endGame ();
+				return;
+			}
+		}
+	}
+
+	void endGame() {
+		Canvas canvas = (Canvas)Instantiate(deathScreen, new Vector3(0,0), transform.rotation);
 	}
 }
