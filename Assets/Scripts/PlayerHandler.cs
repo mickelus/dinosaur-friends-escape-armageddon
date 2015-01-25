@@ -36,14 +36,14 @@ public class PlayerHandler : MonoBehaviour {
 			configureControls(control, 1);
 			players.Add(raptor);
 		}
-		if (PlayerPrefs.GetInt ("character2") >= 0) {
+		if (PlayerPrefs.GetInt ("character2") == 0) {
 			trex = (GameObject) GameObject.Find ("Character 1");
 
 			Platformer2DUserControl control = trex.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 2);
 			players.Add(trex);
 		}
-		if (PlayerPrefs.GetInt ("character2") >= 2) {
+		if (PlayerPrefs.GetInt ("character2") == 1) {
 			raptor = (GameObject) GameObject.Find ("Character 2");
 
 			Platformer2DUserControl control = raptor.GetComponent<Platformer2DUserControl>();
