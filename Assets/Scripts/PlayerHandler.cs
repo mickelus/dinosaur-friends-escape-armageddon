@@ -19,7 +19,6 @@ public class PlayerHandler : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("character1") == 0) {
 
 			trex = (GameObject) GameObject.Find ("Character 1"); //(Resources.Load("Character 1"));
-			trex.transform.position = new Vector3(0,10);
 
 			trexPos = trex.transform;
 
@@ -29,26 +28,26 @@ public class PlayerHandler : MonoBehaviour {
 		}
 		if (PlayerPrefs.GetInt ("character1") == 1) {
 			raptor = (GameObject) GameObject.Find ("Character 2");
-			raptor.transform.position = new Vector3(0,10);
+
 			Platformer2DUserControl control = raptor.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 1);
 			players.Add(raptor);
 		}
 		if (PlayerPrefs.GetInt ("character2") >= 0) {
 			trex = (GameObject) GameObject.Find ("Character 1");
-			trex.transform.position = new Vector3(5,10);
+
 			Platformer2DUserControl control = trex.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 2);
 			players.Add(trex);
 		}
 		if (PlayerPrefs.GetInt ("character2") >= 2) {
 			raptor = (GameObject) GameObject.Find ("Character 2");
-			raptor.transform.position = new Vector3(5,10);
+
 			Platformer2DUserControl control = raptor.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 2);
 			players.Add(raptor);
 		}
-		print (players.Count);
+		//print (players.Count);
 	}
 
 	void configureControls(Platformer2DUserControl control, int player) {

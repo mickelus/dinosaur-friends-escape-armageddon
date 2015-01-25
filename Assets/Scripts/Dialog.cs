@@ -24,11 +24,11 @@ public class Dialog : MonoBehaviour {
 		{
 	
 			float distance = Vector2.Distance (transform.position, child.transform.position);
-
 			if(distance < 2.0f) {
 				show = true;
 			}
-			dialogToShow.SetActive(show);
 		}
+
+		dialogToShow.SetActive(show);
 	}
 }
