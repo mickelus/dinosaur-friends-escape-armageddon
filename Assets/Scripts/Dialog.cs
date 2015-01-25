@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 public class Dialog : MonoBehaviour {
 
-	private List<Transform> players;
+	private List<GameObject> players;
 	public GameObject dialogToShow;
 	public bool show;
 
-	public PlayerHandler playerHandler;
+	public PlayerHandler playerHandler;	
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class Dialog : MonoBehaviour {
 
 		show = false;
 
-		foreach (Transform child in players)
+		foreach (GameObject child in players)
 		{
 	
 			float distance = Vector2.Distance (transform.position, child.transform.position);
