@@ -1,8 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MusicOverScene.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\PlatformerCharacter2D.cs">
     <Files>
-      <File FileName="Assets\MusicOverScene.cs" Line="9" Column="3" />
+      <File FileName="Assets\Timer.cs" Line="6" Column="23" />
+      <File FileName="Assets\Scripts\characterSelectScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelComplete.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FollowMultiplePlayers.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Fader.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\startListener.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\buttonScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\PlatformerCharacter2D.cs" Line="26" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Platformer2DUserControl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

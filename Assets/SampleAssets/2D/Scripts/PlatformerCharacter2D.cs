@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnitySampleAssets.CrossPlatformInput;
 
 namespace UnitySampleAssets._2D
 {
@@ -24,6 +25,7 @@ namespace UnitySampleAssets._2D
         private Animator anim; // Reference to the player's animator component.
 
 
+
         private void Awake()
         {
             // Setting up references.
@@ -38,6 +40,7 @@ namespace UnitySampleAssets._2D
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
             anim.SetBool("Ground", grounded);
+		
 
             // Set the vertical animation
 			anim.SetFloat("vSpeed", rigidbody2D.velocity.y);

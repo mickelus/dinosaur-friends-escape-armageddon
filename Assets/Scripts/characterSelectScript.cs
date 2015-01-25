@@ -12,6 +12,8 @@ public class characterSelectScript : MonoBehaviour {
 	public Sprite[] characterSprites;
 	public string[] characterNames;
 
+	public Fader fader;
+
 	public bool player1_button_fire = false;
 	public bool player2_button_fire = false;
 
@@ -175,8 +177,15 @@ public class characterSelectScript : MonoBehaviour {
 		if (hasAnyoneJoined ()) {
 			PlayerPrefs.SetInt("character1", hasJoined[0] ? selectedCharacter[0] : -1);
 			PlayerPrefs.SetInt("character2", hasJoined[1] ? selectedCharacter[1] : -1);
-			Application.LoadLevel("Level1");
+			this.enabled = false;
+			fader.sceneStarting = false;
+			StartCoroutine(WaitThenLoad());
 		}
+	}
+	
+	IEnumerator WaitThenLoad() {
+		yield return new WaitForSeconds(3);
+		Application.LoadLevel ("Level1");
 	}
 	
 

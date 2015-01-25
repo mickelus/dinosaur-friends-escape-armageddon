@@ -61,7 +61,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 470742}
-  - 68: {fileID: 6870742}
+  - 68: {fileID: 6861928}
   m_Layer: 10
   m_Name: Rygg Collider
   m_TagString: Untagged
@@ -76,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.0499992, y: 1.60000002, z: 0}
+  m_LocalPosition: {x: -12.3900003, y: 1.96000004, z: 0}
   m_LocalScale: {x: 1.77153289, y: 1.77153039, z: 1}
   m_Children:
   - {fileID: 441988}
@@ -115,8 +115,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .100000001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: .0120000001, y: .197999999, z: 0}
+  m_LocalScale: {x: .0505202487, y: .514036417, z: .514036417}
   m_Children: []
   m_Father: {fileID: 441984}
   m_RootOrder: 2
@@ -157,7 +157,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .94493413, y: .730849981}
   m_Center: {x: -.00635717204, y: .0254248232}
---- !u!68 &6870742
+--- !u!68 &6861928
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -167,8 +167,10 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Points:
-  - {x: -.583628118, y: .299409151}
-  - {x: .523657858, y: .296646833}
+  - {x: -8.98191929, y: .341025174}
+  - {x: -6.52018833, y: .358510375}
+  - {x: 7.4089756, y: .341024965}
+  - {x: 9.49597454, y: .328394353}
 --- !u!95 &9541984
 Animator:
   serializedVersion: 3
