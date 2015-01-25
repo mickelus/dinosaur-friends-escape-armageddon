@@ -6,41 +6,51 @@ using UnitySampleAssets._2D;
 using UnitySampleAssets.CrossPlatformInput;
 
 public class PlayerHandler : MonoBehaviour {
-
-	public Transform trex;
-	public Transform raptor;
-
-	public Canvas deathScreen;
 	
-	public List<Transform> players;
+	public Canvas deathScreen;
+
+	public GameObject trex;
+	public GameObject raptor;
+
+	public Transform trexPos;
+	public Transform raptorPos;
+
+	
+	public List<GameObject> players;
 
 	// Use this for initialization
 	void Start () {
-		players = new List<Transform> ();
 
 		if (PlayerPrefs.GetInt ("character1") == 0) {
-			Transform t = (Transform)Instantiate(trex, new Vector3(0,10), transform.rotation);
-			Platformer2DUserControl control = t.GetComponent<Platformer2DUserControl>();
+
+			trex = (GameObject) GameObject.Find ("Character 1"); //(Resources.Load("Character 1"));
+
+			trexPos = trex.transform;
+
+			Platformer2DUserControl control = trex.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 1);
-			players.Add(t);
+			players.Add(trex);
 		}
 		if (PlayerPrefs.GetInt ("character1") == 1) {
-			Transform t = (Transform)Instantiate (raptor, new Vector3(0,10), transform.rotation);
-			Platformer2DUserControl control = t.GetComponent<Platformer2DUserControl>();
+			raptor = (GameObject) GameObject.Find ("Character 2");
+
+			Platformer2DUserControl control = raptor.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 1);
-			players.Add(t);
+			players.Add(raptor);
 		}
 		if (PlayerPrefs.GetInt ("character2") >= 0) {
-			Transform t = (Transform)Instantiate (trex, new Vector3(5,10), transform.rotation);
-			Platformer2DUserControl control = t.GetComponent<Platformer2DUserControl>();
+			trex = (GameObject) GameObject.Find ("Character 1");
+
+			Platformer2DUserControl control = trex.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 2);
-			players.Add(t);
+			players.Add(trex);
 		}
 		if (PlayerPrefs.GetInt ("character2") >= 2) {
-			Transform t = (Transform)Instantiate (raptor, new Vector3(5,10), transform.rotation);
-			Platformer2DUserControl control = t.GetComponent<Platformer2DUserControl>();
+			raptor = (GameObject) GameObject.Find ("Character 2");
+
+			Platformer2DUserControl control = raptor.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 2);
-			players.Add(t);
+			players.Add(raptor);
 		}
 	}
 
@@ -53,7 +63,7 @@ public class PlayerHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		foreach (Transform player in players) {
+		foreach (GameObject player in players) {
 			if (player.GetComponent<Health> ().dead) {
 				endGame ();
 				return;

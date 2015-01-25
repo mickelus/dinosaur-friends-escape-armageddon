@@ -37,9 +37,7 @@ public class characterSelectScript : MonoBehaviour {
 	void Update () {
 
 		float sensitivity = 0.1f;
-		print ("update");
 		if(CrossPlatformInputManager.GetButtonDown("Player 1 Jump")) {
-			print ("Player 1 A");
 			enableCharacterSelect(0);
 		}
 		if(CrossPlatformInputManager.GetButtonDown("Player 2 Jump")) {
@@ -72,7 +70,6 @@ public class characterSelectScript : MonoBehaviour {
 		if(Mathf.Abs (CrossPlatformInputManager.GetAxis("Player 1 Horizontal")) < sensitivity) {
 			player1_button_fire = false;
 		}
-		print (CrossPlatformInputManager.GetAxis ("Player 1 Horizontal"));
 		if(CrossPlatformInputManager.GetAxis("Player 1 Horizontal") > sensitivity && player1_button_fire == false) {
 			changeCharacter(0, false);
 			player1_button_fire = true;
@@ -160,7 +157,6 @@ public class characterSelectScript : MonoBehaviour {
 
 	}
 	void updateCharacter(int index) {
-		print (index);
 		characterTexts[index].text = characterNames [selectedCharacter [index]];
 		characterImages[index].sprite = characterSprites [selectedCharacter [index]];
 	}

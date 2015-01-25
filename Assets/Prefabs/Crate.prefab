@@ -25,8 +25,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.29199982, y: .758000016, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.22000003, y: 4.63999987, z: 0}
+  m_LocalScale: {x: 1.87969184, y: 1.87969208, z: 1.87969208}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -36,7 +36,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171628}
-  m_Mass: 15
+  m_Mass: 60
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -44,7 +44,7 @@ Rigidbody2D:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!61 &6171628
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -54,8 +54,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: f2edfdaec2c45bf4c800c280a23287b9, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .513333321, y: .513333321}
-  m_Center: {x: -5.96046448e-08, y: 0}
+  m_Size: {x: .619089127, y: .619089425}
+  m_Center: {x: .00480707828, y: -.00480745826}
 --- !u!212 &21271628
 SpriteRenderer:
   m_ObjectHideFlags: 1
