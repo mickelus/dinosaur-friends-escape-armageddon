@@ -28483,10 +28483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ab360252444634097803cf85988a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionArray:
-  - {fileID: 1656972559}
-  - {fileID: 422875409}
-  cameraZoom: 5
+  positionArray: []
+  playerHandler: {fileID: 0}
+  cameraZoom: 1
 --- !u!4 &1577619997
 Transform:
   m_ObjectHideFlags: 0
@@ -29539,9 +29538,10 @@ GameObject:
   - 114: {fileID: 1656972563}
   - 114: {fileID: 1656972562}
   - 61: {fileID: 1656972561}
+  - 114: {fileID: 1656972560}
   - 114: {fileID: 1656972568}
   m_Layer: 8
-  m_Name: Player 1
+  m_Name: Character 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29562,6 +29562,20 @@ Transform:
   - {fileID: 1746387134}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1656972560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11412848, guid: d385770038c6c764da484d870934443e,
+    type: 2}
+  m_PrefabInternal: {fileID: 917122763}
+  m_GameObject: {fileID: 1656972558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70fc7d2ca8d2844f92a170e0f49198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  dead: 0
 --- !u!61 &1656972561
 BoxCollider2D:
   m_ObjectHideFlags: 0
