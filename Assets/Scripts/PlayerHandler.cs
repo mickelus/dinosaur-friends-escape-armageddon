@@ -7,9 +7,6 @@ public class PlayerHandler : MonoBehaviour {
 
 	public GameObject trex;
 	public GameObject raptor;
-
-	public Transform trexPos;
-	public Transform raptorPos;
 	
 	public List<GameObject> players;
 
@@ -19,8 +16,6 @@ public class PlayerHandler : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("character1") == 0) {
 
 			trex = (GameObject) GameObject.Find ("Character 1"); //(Resources.Load("Character 1"));
-
-			trexPos = trex.transform;
 
 			Platformer2DUserControl control = trex.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 1);
