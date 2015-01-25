@@ -98,7 +98,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141984}
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 3
@@ -179,9 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControlHorizontal: Player 1 Horizontal
-  playerControlVertical: Player 1 Vertical
-  playerControlJump: Player 1 Jump
+  playerControlHorizontal: 
+  playerControlVertical: 
+  playerControlJump: 
   playerControlUse: 
 --- !u!114 &11441986
 MonoBehaviour:
@@ -200,7 +200,7 @@ MonoBehaviour:
   airControl: 1
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4294966783
+    m_Bits: 512
 --- !u!212 &21241984
 SpriteRenderer:
   m_ObjectHideFlags: 1
