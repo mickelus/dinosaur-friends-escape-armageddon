@@ -54959,7 +54959,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1515291792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.26999998, y: 1.51999998, z: 0}
+  m_LocalPosition: {x: -5.26999998, y: 1.42999995, z: 0}
   m_LocalScale: {x: .965363443, y: .965362668, z: .965362668}
   m_Children: []
   m_Father: {fileID: 1744833291}
@@ -66435,7 +66435,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerArray: []
   playerHandler: {fileID: 1290779584}
-  cameraZoom: 1
 --- !u!4 &1871036007
 Transform:
   m_ObjectHideFlags: 0
@@ -72611,7 +72610,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2037519127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.69999981, y: 1.51999998, z: 0}
+  m_LocalPosition: {x: -6.69999981, y: 1.42999995, z: 0}
   m_LocalScale: {x: .965363443, y: .965362668, z: .965362668}
   m_Children: []
   m_Father: {fileID: 1744833291}
