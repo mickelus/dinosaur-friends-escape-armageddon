@@ -15,6 +15,7 @@ public class PlayerHandler : MonoBehaviour {
 	public Transform trexPos;
 	public Transform raptorPos;
 
+	private bool gameOver = false;
 	
 	public List<GameObject> players;
 
@@ -72,6 +73,15 @@ public class PlayerHandler : MonoBehaviour {
 	}
 
 	void endGame() {
-		Canvas canvas = (Canvas)Instantiate(deathScreen, new Vector3(0,0), transform.rotation);
+		if (!gameOver) {
+			gameOver = true;
+			Canvas canvas = (Canvas)Instantiate (deathScreen, new Vector3 (0, 0), transform.rotation);
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.tag == "Player") {
+			other.GetComponentInParent<Health>().health = 0;
+		}
 	}
 }

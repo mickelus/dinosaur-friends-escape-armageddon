@@ -14,7 +14,7 @@ public class deathScreenScript : MonoBehaviour {
 		print ("update");
 		if (CrossPlatformInputManager.GetButtonDown ("Player Start")) {
 			print ("Player Start");
-			Application.LoadLevel("startScreen");
+			Application.LoadLevel("startMenu");
 		}
 	}
 }
