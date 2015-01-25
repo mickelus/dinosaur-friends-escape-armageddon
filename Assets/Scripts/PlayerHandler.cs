@@ -1,12 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using UnitySampleAssets._2D;
+using UnitySampleAssets.CrossPlatformInput;
 
 public class PlayerHandler : MonoBehaviour {
+	
+	public Canvas deathScreen;
 
 	public GameObject trex;
 	public GameObject raptor;
+<<<<<<< HEAD
+=======
+
+	public Transform trexPos;
+	public Transform raptorPos;
+
+	private bool gameOver = false;
+>>>>>>> 6019e188be4a92f03c207c25c71298007dfd5372
 	
 	public List<GameObject> players;
 
@@ -42,7 +54,6 @@ public class PlayerHandler : MonoBehaviour {
 			configureControls(control, 2);
 			players.Add(raptor);
 		}
-		//print (players.Count);
 	}
 
 	void configureControls(Platformer2DUserControl control, int player) {
@@ -54,6 +65,24 @@ public class PlayerHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		foreach (GameObject player in players) {
+			if (player.GetComponent<Health> ().dead) {
+				endGame ();
+				return;
+			}
+		}
+	}
+
+	void endGame() {
+		if (!gameOver) {
+			gameOver = true;
+			Canvas canvas = (Canvas)Instantiate (deathScreen, new Vector3 (0, 0), transform.rotation);
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.tag == "Player") {
+			other.GetComponentInParent<Health>().health = 0;
+		}
 	}
 }

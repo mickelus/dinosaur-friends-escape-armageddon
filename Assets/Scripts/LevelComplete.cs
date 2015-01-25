@@ -17,11 +17,19 @@ public class LevelComplete : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+<<<<<<< HEAD
 		if(Vector2.Distance (char1.transform.position, transform.position) < distance &&
 			Vector2.Distance (char2.transform.position, transform.position) < distance) {
 			fader.sceneStarting = false;
 			StartCoroutine(WaitThenLoad());
 
+=======
+		if(Vector2.Distance (char1.transform.position, transform.position) < 2.0f &&
+			Vector2.Distance (char2.transform.position, transform.position) < 2.0f) {
+			FadeOut();
+			new WaitForSeconds(2);
+			Application.LoadLevel (nextLevel);
+>>>>>>> 6019e188be4a92f03c207c25c71298007dfd5372
 		}
 	}
 
