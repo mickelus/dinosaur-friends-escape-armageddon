@@ -8648,6 +8648,14 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 21241984, guid: 22f0e964af635d64d90f74ed43493799, type: 2}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 21241984, guid: 22f0e964af635d64d90f74ed43493799, type: 2}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22f0e964af635d64d90f74ed43493799, type: 2}
   m_RootGameObject: {fileID: 1197741571}
@@ -71402,8 +71410,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 2511236001
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 46702838f29047a4584e4d9b45170c07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1197840206
@@ -97414,25 +97422,30 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 3.09187317
+  MaxDistance: 25.1993122
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+    - time: .173258528
+      value: .946969688
+      inSlope: -.331160337
+      outSlope: -.331160337
+      tangentMode: 0
+    - time: .861573458
+      value: .340909094
+      inSlope: -1.75424707
+      outSlope: -1.75424707
       tangentMode: 0
     - time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -.122745715
+      outSlope: -.122745715
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -97449,8 +97462,8 @@ AudioSource:
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: .150000006
+    - time: .0112359552
+      value: .286363631
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -97463,7 +97476,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1660151853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 87.7699966, y: -4.17000008, z: 0}
+  m_LocalPosition: {x: 82.3000031, y: -8.10000038, z: 0}
   m_LocalScale: {x: 2.0872612, y: 2.0872612, z: 2.0872612}
   m_Children: []
   m_Father: {fileID: 0}
