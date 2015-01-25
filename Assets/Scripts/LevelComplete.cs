@@ -22,12 +22,11 @@ public class LevelComplete : MonoBehaviour {
 			Vector2.Distance (char2.transform.position, transform.position) < distance) {
 			fader.sceneStarting = false;
 			StartCoroutine(WaitThenLoad());
-			Application.LoadLevel (nextLevel);
 		}
 	}
 
 	IEnumerator WaitThenLoad() {
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(3);
 		Application.LoadLevel (nextLevel);
 	}
 
