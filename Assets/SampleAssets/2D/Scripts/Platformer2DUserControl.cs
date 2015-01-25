@@ -33,10 +33,10 @@ namespace UnitySampleAssets._2D
         private void FixedUpdate()
         {
             // Read the inputs.
-            bool crouch = Input.GetKey(KeyCode.LeftControl);
+            //bool crouch = Input.GetKey(KeyCode.LeftControl);
 			float h = Input.GetAxis(playerControlHorizontal);
             // Pass all parameters to the character control script.
-            character.Move(h, crouch, jump);
+            character.Move(h, false, jump);
             jump = false;
 
 			Physics2D.IgnoreLayerCollision (8, 9, rigidbody2D.velocity.y > 0);
