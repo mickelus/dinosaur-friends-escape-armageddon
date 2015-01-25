@@ -16,6 +16,7 @@ public class startListener : MonoBehaviour {
 		if (CrossPlatformInputManager.GetButtonDown ("Player Start")) {
 			startCanvas.enabled = false;
 			characterSelectCanvas.enabled = true;
+			GameObject.Find ("Effects").SetActive(false);
 		}
 	}
 }

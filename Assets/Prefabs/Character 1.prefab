@@ -167,8 +167,8 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Points:
-  - {x: -.299962819, y: .327775508}
-  - {x: .186809018, y: .335650653}
+  - {x: -.583628118, y: .299409151}
+  - {x: .523657858, y: .296646833}
 --- !u!95 &9541984
 Animator:
   serializedVersion: 3
