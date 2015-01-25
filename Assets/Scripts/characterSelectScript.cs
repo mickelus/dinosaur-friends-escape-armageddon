@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnitySampleAssets.CrossPlatformInput;
 
 public class characterSelectScript : MonoBehaviour {
 
@@ -11,9 +12,13 @@ public class characterSelectScript : MonoBehaviour {
 	public Sprite[] characterSprites;
 	public string[] characterNames;
 
+	public bool player1_button_fire = false;
+	public bool player2_button_fire = false;
+
 	public Text startText;
 
 	public int numPlayers = 2;
+
 
 	bool[] hasJoined;
 	int[] selectedCharacter;
@@ -30,59 +35,90 @@ public class characterSelectScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Joystick1Button16)) {
+
+		float sensitivity = 0.9f;
+
+		if(CrossPlatformInputManager.GetButtonDown("Player 1 A")) {
 			enableCharacterSelect(0);
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick2Button16)) {
+		if(CrossPlatformInputManager.GetButtonDown("Player 2 A")) {
 			enableCharacterSelect(1);
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick3Button16)) {
+		/*
+		if(CrossPlatformInputManager.GetButtonDown("Player 3 A")) {
 			enableCharacterSelect(2);
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick4Button16)) {
+		if(CrossPlatformInputManager.GetButtonDown("Player 4 A")) {
 			enableCharacterSelect(3);
 		}
+		*/
 
-		if(Input.GetKeyDown(KeyCode.Joystick1Button17)) {
+		if(CrossPlatformInputManager.GetButtonDown("Player 1 B")) {
 			disableCharacterSelect(0);
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick2Button17)) {
+		if(CrossPlatformInputManager.GetButtonDown("Player 2 B")) {
 			disableCharacterSelect(1);
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick3Button17)) {
+		/*
+		if(CrossPlatformInputManager.GetButtonDown("Player 3 B")) {
 			disableCharacterSelect(2);
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick4Button17)) {
+		if(CrossPlatformInputManager.GetButtonDown("Player 4 B")) {
 			disableCharacterSelect(3);
 		}
+		 */
 
-		if(Input.GetKeyDown(KeyCode.Joystick1Button7)) {
+		if(Mathf.Abs (CrossPlatformInputManager.GetAxis("Player 1 Horizontal")) < sensitivity) {
+			player1_button_fire = false;
+		}
+
+		if(CrossPlatformInputManager.GetAxis("Player 1 Horizontal") > sensitivity && player1_button_fire == false) {
 			changeCharacter(0, false);
+			player1_button_fire = true;
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick2Button7)) {
+
+		if(CrossPlatformInputManager.GetAxis("Player 1 Horizontal") < -sensitivity && player1_button_fire == false) {
+			changeCharacter(0, true);
+			player1_button_fire = true;
+		}
+
+
+
+
+
+
+		if(Mathf.Abs (CrossPlatformInputManager.GetAxis("Player 2 Horizontal")) < sensitivity) {
+			player2_button_fire = false;
+		}
+		
+		if(CrossPlatformInputManager.GetAxis("Player 2 Horizontal") > sensitivity && player2_button_fire == false) {
 			changeCharacter(1, false);
+			player2_button_fire = true;
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick3Button7)) {
+		
+		if(CrossPlatformInputManager.GetAxis("Player 2 Horizontal") < -sensitivity && player2_button_fire == false) {
+			changeCharacter(1, true);
+			player2_button_fire = true;
+		}
+	
+
+		/*
+		if(CrossPlatformInputManager.GetButtonDown("Player 3 Left")) {
 			changeCharacter(2, false);
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick4Button7)) {
+		if(CrossPlatformInputManager.GetButtonDown("Player 4 Left")) {
 			changeCharacter(3, false);
-		}
+		}*/
 
-		if(Input.GetKeyDown(KeyCode.Joystick1Button8)) {
-			changeCharacter(0, true);
-		}
-		if(Input.GetKeyDown(KeyCode.Joystick2Button8)) {
-			changeCharacter(1, true);
-		}
-		if(Input.GetKeyDown(KeyCode.Joystick3Button8)) {
+		/*
+		if(CrossPlatformInputManager.GetButtonDown("Player 3 Right")) {
 			changeCharacter(2, true);
 		}
-		if(Input.GetKeyDown(KeyCode.Joystick4Button8)) {
+		if(CrossPlatformInputManager.GetButtonDown("Player 4 Right")) {
 			changeCharacter(3, true);
-		}
+		}*/
 
-		if (Input.GetKeyDown (KeyCode.JoystickButton9)) {
+		if (CrossPlatformInputManager.GetButtonDown("Player Start")) {
 			startGame();
 		}
 

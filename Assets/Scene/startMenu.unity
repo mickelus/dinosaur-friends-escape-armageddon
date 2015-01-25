@@ -2163,6 +2163,8 @@ MonoBehaviour:
   characterNames:
   - Fabulous
   - Philosopher
+  player1_button_fire: 0
+  player2_button_fire: 0
   startText: {fileID: 848240765}
   numPlayers: 2
 --- !u!1 &1427160909

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnitySampleAssets.CrossPlatformInput;
 
 public class startListener : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class startListener : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.JoystickButton9)) {
+		if (CrossPlatformInputManager.GetButtonDown ("Player Start")) {
 			startCanvas.enabled = false;
 			characterSelectCanvas.enabled = true;
 		}

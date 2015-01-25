@@ -15,28 +15,28 @@ public class PlayerHandler : MonoBehaviour {
 		players = new List<Transform> ();
 
 		if (PlayerPrefs.GetInt ("character1") == 0) {
-			Transform transform = (Transform)Instantiate(trex, new Vector3(0,10), new Quaternion(0,0,0,0));
-			Platformer2DUserControl control = transform.GetComponent<Platformer2DUserControl>();
+			Transform t = (Transform)Instantiate(trex, new Vector3(0,10), transform.rotation);
+			Platformer2DUserControl control = t.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 1);
-			players.Add(transform);
+			players.Add(t);
 		}
 		if (PlayerPrefs.GetInt ("character1") == 1) {
-			Transform transform = (Transform)Instantiate (raptor, new Vector3(0,10), new Quaternion(0,0,0,0));
-			Platformer2DUserControl control = transform.GetComponent<Platformer2DUserControl>();
+			Transform t = (Transform)Instantiate (raptor, new Vector3(0,10), transform.rotation);
+			Platformer2DUserControl control = t.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 1);
-			players.Add(transform);
+			players.Add(t);
 		}
 		if (PlayerPrefs.GetInt ("character2") >= 0) {
-			Transform transform = (Transform)Instantiate (trex, new Vector3(5,10), new Quaternion(0,0,0,0));
-			Platformer2DUserControl control = transform.GetComponent<Platformer2DUserControl>();
+			Transform t = (Transform)Instantiate (trex, new Vector3(5,10), transform.rotation);
+			Platformer2DUserControl control = t.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 2);
-			players.Add(transform);
+			players.Add(t);
 		}
 		if (PlayerPrefs.GetInt ("character2") >= 2) {
-			Transform transform = (Transform)Instantiate (raptor, new Vector3(5,10), new Quaternion(0,0,0,0));
-			Platformer2DUserControl control = transform.GetComponent<Platformer2DUserControl>();
+			Transform t = (Transform)Instantiate (raptor, new Vector3(5,10), transform.rotation);
+			Platformer2DUserControl control = t.GetComponent<Platformer2DUserControl>();
 			configureControls(control, 2);
-			players.Add(transform);
+			players.Add(t);
 		}
 		print (players.Count);
 	}
